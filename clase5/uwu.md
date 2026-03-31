@@ -5,4 +5,7 @@ buscar sinónimos de estético: no ocupar esa palabra
 riquesa gráfica y de selección cromática, interacción, describir las variables y opciones
 
 evitar imágenes muy pesadas, formato png 8 y el texto en casillas de texto, no en imágen 
+fotopea.com
+
+144 de dpi en imágenes
 
