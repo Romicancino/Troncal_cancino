@@ -9,3 +9,4 @@ fotopea.com
 
 144 de dpi en imágenes
 
+mandar conclusionee y evitar inferej
