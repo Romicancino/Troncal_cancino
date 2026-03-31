@@ -9,4 +9,18 @@ fotopea.com
 
 144 de dpi en imágenes
 
-mandar conclusionee y evitar inferej
+mandar conclusionee y evitar inferencias
+
+entender la neceso
+las relaciones de colores, como se coloca la información.
+
+limitaciones de idioma
+
+como hacer un gráfico con pictogramas+
+como responden estis gráficos al cistema que se les da
+
+
+peter saville/diseñador /
+
+
+
