@@ -1,27 +1,48 @@
-
 <!doctype html>
 <html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Un fetch</title>
+        <title>electivos diseño</title>
         <style>
             body {
                 font-family: Helvetica, Arial, sans-serif; 
+                margin: 20px;
             }
-			h1 {
-    font-family: 'DM Serif Display', Georgia, serif;
-    color: #f08080;
-    font-size: 2.4rem;
-    margin-bottom: 0.2rem;
-    letter-spacing: -0.5px;
-}
+            h1 {
+                font-family: 'DM Serif Display', Georgia, serif;
+                color: #f08080;
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+                letter-spacing: -0.5px;
+            }
+            
+        
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                max-width: 500px; 
+                margin-top: 10px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 10px 15px;
+                text-align: left;
+            }
+            th {
+                background-color: #fce4e4; 
+                color: #333;
+                font-weight: bold;
+            }
+           
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
         </style>
     </head>
     <body>
-        <h1>Mis electivos de Diseño .ೀ⠀</h1>
-		
-        <ol id="estudiantes"></ol>
+        <h1> Mis electivos de Diseño .ೀ⠀</h1>
+        
         <table></table>
 
         <script>
@@ -39,20 +60,36 @@
                     const trabajo = datos.data;
                     console.log("1. Datos recibidos:", trabajo);
                     
-                
                     if (Array.isArray(trabajo)) {
-                        let contenidoTabla = ""; 
+                        // 
+                        let contenidoTabla = `
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Electivos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        `; 
+                        
+                        let contador = 1; 
                         
                         trabajo.forEach((x) => {
                             console.log("2. Analizando elemento:", x); 
                             
-                          
                             if (x.ok == 1) { 
-                                contenidoTabla += `<tr><td>${x.name}</td></tr>`;
+                                contenidoTabla += `
+                                    <tr>
+                                        <td>${contador}</td>
+                                        <td>${x.name}</td>
+                                    </tr>
+                                `;
+                                contador++; 
                             }
                         });
                         
-                  
+                        contenidoTabla += `</tbody>`;
+                        
                         t.innerHTML = contenidoTabla;
                     } else {
                         console.error("Error: datos.data no es un Arreglo (Array), es un", typeof trabajo);
